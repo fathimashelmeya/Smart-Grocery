@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Grocery | Shopkeeper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shopkeeper.css">
+</head>
+<body data-page="shopkeeper">
+
+<header class="app-header">
+  <div class="header-left">
+    <div class="brand-logo small">SG</div>
+    <div>
+      <h1>Smart Grocery</h1>
+      <p>Partner Store Dashboard</p>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <div class="store-status-pill">
+      Status:
+      <span id="storeStatusLabel" class="status-dot status-open">Open</span>
+    </div>
+    <div class="user-pill">
+      <span id="shopName">Shopkeeper</span>
+    </div>
+    <button id="logoutBtn" class="btn ghost">Logout</button>
+  </div>
+</header>
+
+<main class="shop-layout">
+  <section class="card">
+    <h2>Store Status</h2>
+    <p class="muted small">
+      Customers see this on every product card. Set it to Busy or Closed when needed.
+    </p>
+    <select id="storeStatusSelect">
+      <option value="open">🟢 Open</option>
+      <option value="busy">🟡 Busy</option>
+      <option value="closed">🔴 Closed</option>
+    </select>
+  </section>
+
+  <section class="card">
+    <h2>Add Product</h2>
+    <p class="muted small">Upload items visible to all nearby customers.</p>
+    <div class="form-row">
+      <input type="text" id="productName" placeholder="Product name (e.g. Fresh Tomatoes)">
+      <input type="number" id="productPrice" placeholder="Price ₹" min="1">
+    </div>
+    <div class="form-row">
+      <input type="text" id="productImage" placeholder="Image URL (optional)">
+      <select id="productCategory">
+        <option value="">Category</option>
+        <option value="Fruits">Fruits</option>
+        <option value="Vegetables">Vegetables</option>
+        <option value="Snacks">Snacks</option>
+        <option value="Milk & Dairy">Milk & Dairy</option>
+        <option value="Drinks">Drinks</option>
+      </select>
+    </div>
+    <button class="btn primary" id="addProductBtn">Add Product</button>
+    <p id="productMsg" class="small"></p>
+  </section>
+
+  <section class="card">
+    <h2>Your Products</h2>
+    <div id="shopProductList"></div>
+  </section>
+
+  <section class="card">
+    <h2>Orders Received</h2>
+    <div id="receivedOrders"></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
