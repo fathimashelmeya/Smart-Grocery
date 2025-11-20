@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Grocery | Customer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="customer.css">
+</head>
+<body data-page="customer">
+
+<header class="app-header">
+  <div class="header-left">
+    <div class="brand-logo small">SG</div>
+    <div>
+      <h1>Smart Grocery</h1>
+      <p>Under 30 min delivery · Blinkit-style</p>
+    </div>
+  </div>
+
+  <div class="header-center">
+    <input type="text" id="searchInput" placeholder="Search for milk, fruits, biscuits…">
+  </div>
+
+  <div class="header-right">
+    <div class="badge-group">
+      <div class="pill pill-soft">
+        ⭐ Points: <span id="rewardPoints">0</span>
+      </div>
+      <div class="pill pill-soft">
+        ✅ Prepaid: <span id="prepaidCount">0</span>
+      </div>
+    </div>
+    <div class="user-pill">
+      <span id="custName">Customer</span>
+    </div>
+    <button id="logoutBtn" class="btn ghost">Logout</button>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="products-section">
+    <div class="top-row">
+      <h2>All Products</h2>
+      <p class="muted">Fresh products from nearby stores.</p>
+    </div>
+
+    <!-- Category tabs -->
+    <div id="categoryTabs" class="category-tabs">
+      <!-- Tabs rendered by JS -->
+    </div>
+
+    <div id="productGrid" class="product-grid">
+      <!-- Product cards by JS -->
+    </div>
+  </section>
+
+  <aside class="cart-panel">
+    <div class="card store-card">
+      <h3>Your Smart Khata</h3>
+      <p class="muted small">
+        Khata unlocks after <strong>5 prepaid</strong> orders.
+      </p>
+      <div class="khata-info">
+        <p>Credit limit: ₹ <span id="creditLimit">0</span></p>
+        <p>Used khata: ₹ <span id="usedCredit">0</span></p>
+      </div>
+    </div>
+
+    <div class="card cart-card">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <span class="muted small" id="cartCountLabel">0 items</span>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div class="row">
+          <span>Subtotal</span>
+          <span>₹ <span id="cartSubtotal">0</span></span>
+        </div>
+        <div class="row">
+          <span>Reward discount</span>
+          <span>- ₹ <span id="rewardDiscountPreview">0</span></span>
+        </div>
+        <div class="row total-row">
+          <span>To Pay</span>
+          <span>₹ <span id="cartTotal">0</span></span>
+        </div>
+
+        <label class="small">
+          Payment method
+          <select id="paymentMethod">
+            <option value="online">Online (UPI / Card)</option>
+            <option value="wallet">Smart Wallet</option>
+            <option value="wallet-points">Wallet + Reward Points</option>
+          </select>
+        </label>
+
+        <label class="small checkbox-line">
+          <input type="checkbox" id="useRewards">
+          Use reward points as discount (1 point = ₹1)
+        </label>
+
+        <button class="btn primary full" id="prepaidBtn">Place Prepaid Order</button>
+        <button class="btn secondary full" id="khataBtn">Place Khata Order</button>
+        <p id="khataNote" class="muted tiny"></p>
+      </div>
+    </div>
+
+    <div class="card history-card">
+      <h3>Order history</h3>
+      <div id="orderHistory"></div>
+    </div>
+  </aside>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
