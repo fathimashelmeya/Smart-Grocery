@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Grocery | Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body data-page="signup">
+
+  <div class="brand-strip">
+    <div class="brand-logo">SG</div>
+    <div class="brand-text">
+      <h1>Smart Grocery</h1>
+      <p>Blinkit-style, but smarter 😉</p>
+    </div>
+  </div>
+
+  <div class="auth-box">
+    <h2>Create account</h2>
+    <p class="auth-sub">Choose your role and start</p>
+
+    <form id="signupForm">
+      <input type="text" id="signupName" placeholder="Full Name" required>
+      <input type="email" id="signupEmail" placeholder="Email" required>
+      <input type="password" id="signupPassword" placeholder="Password (min 6 chars)" required>
+
+      <select id="signupRole" required>
+        <option value="">I am a…</option>
+        <option value="customer">Customer</option>
+        <option value="shopkeeper">Shopkeeper</option>
+      </select>
+
+      <button class="btn primary" type="submit">Sign up</button>
+      <p class="switch">Already have an account? <a href="index.html">Login</a></p>
+      <p id="signupMsg" class="msg"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
