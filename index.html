@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Grocery | Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body data-page="login">
+
+  <div class="brand-strip">
+    <div class="brand-logo">SG</div>
+    <div class="brand-text">
+      <h1>Smart Grocery</h1>
+      <p>Fast delivery • Local stores • Smart khata</p>
+    </div>
+  </div>
+
+  <div class="auth-box">
+    <h2>Welcome back 👋</h2>
+    <p class="auth-sub">Login to continue</p>
+
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+
+      <select id="loginRole" required>
+        <option value="">Login as</option>
+        <option value="customer">Customer</option>
+        <option value="shopkeeper">Shopkeeper</option>
+      </select>
+
+      <button class="btn primary" type="submit">Login</button>
+      <p class="switch">New here? <a href="signup.html">Create an account</a></p>
+      <p id="loginMsg" class="msg"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
