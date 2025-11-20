@@ -1,0 +1,67 @@
+/* FILE: shopkeeper.css */
+
+.shop-layout .card {
+  min-height: 120px;
+}
+
+.form-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+}
+
+/* Product list */
+
+#shopProductList .shop-item {
+  border-radius: 12px;
+  border: 1px solid #dbeafe;
+  padding: 8px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  display: flex;
+  gap: 8px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.shop-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #eff6ff;
+}
+
+.shop-item-main {
+  flex: 1;
+}
+
+.shop-item-main h4 {
+  margin: 0 0 2px;
+  font-size: 13px;
+}
+
+.shop-item-main p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+#productMsg {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+/* Orders received cards */
+
+#receivedOrders .order-card {
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
